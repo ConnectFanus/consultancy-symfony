@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta charset="utf-8">
+        <title>{% block title %}Consultancy ENVT!{% endblock %}</title>
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+            <link rel="stylesheet" href="{{ asset('vendor/fontawesome/css/font-awesome.min.css') }}">
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+          
+      {#<a href="{{ path('app_test_show',{'page': 'Liverpool'}) }}"></a>#}
+        <div class="container">
+            <div class="row">
+                <div class=" frontpage col-sm-8">
+{#        <div class="col-sm-8" style="background-color:lavender;"></div>
+#}        
+        
+        <div class="search-bar">
+            <form method="GET" action="" class="js-sea-search sea-search">
+                <input type="search" name="q" placeholder="Search Sea Creatures" autocomplete="off" class="search-input">
+            </form>
+        </div>
+        <header class="header">
+            
+            <h1 class="logo">Fanus Consultancy </h1>
+            
+            
+        </header>
+<div class="headerlinks">
+    <ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Agricultural Science</a></li>
+  <li role="presentation"><a href="#">Environmental Science</a></li>
+  <li role="presentation"><a href="#">Agribusiness Management</a></li>
+  <li role="presentation"><a href="#">Contact</a></li>
+</ul>
+{#<ul id="footerlinks">
+<li><a href="link 1">Home</a></li>
+  <li><a href="link 2">Agricultural Science</a></li>
+  <li><a href="link 3">Environmental Science</a></li>
+  <li><a href="link4">Agribusiness Management</a></li>
+  <li><a href="link5">Fanus Consultancy</a></li>        
+</ul>#}
+    </div>
+
+
+
+       <div class="main-content">
+            {% block body %}{% endblock %}
+        </div>
+
+        <div class="footer">
+            <p class="footer-text">Contact us at   :<span class=""></span> <a href="fanusconsultancy@gmail.com">Fanus Consultancy</a></p><br>
+            <p class="footer-text">Like our facebook   : <span class=""></span> <a href="www.facebook.com">Visit out facebook page</a></p>
+        </div>
+
+        {% block javascripts %}
+            <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+            <script src="{{ asset('js/main.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
+
