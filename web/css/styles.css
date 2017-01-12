@@ -1,0 +1,10 @@
+.companyfooter {
+    background-color: #c2cf9b;
+    border-top-color: #565c45;
+}
+.companylogo{
+    float: right;
+    font-family: sans-serif;
+    font-style: italic;
+    color: #004600;
+}
