@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block title %}Consultancy Agency{% endblock %}
+{% block body %}
+
+
+  
+
+    <nav class="navbar navbar-light bg-success" role ="navigation">
+        <div class ="container">
+            <ul class ="nav navbar-nav">
+                <li class ="active"><a href ="consultancy">Home </a></li>
+   
+                {% for key, service in services %}
+                <li><a href="{{ key}}">{{ service }}</a></li>        
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+    <div class ="container"
+         <div class ="row">
+             <div class ="col-lg-10">   
+                <h1> Agribusiness consultancy</h1>
+                <p> This Firm advises clients across the entire agribusiness value chain in addressing a range of strategic, commercial and operational issues. Having completed hundreds of engagements within the diversified agribusiness sector, we understand the unique dynamics and economics of agricultural markets, as well as the critical issues and challenges facing operators seeking to grow and elevate their performance. </P>
+             </div>
+          </div>
+    </div>
+{% endblock %}
