@@ -46,7 +46,12 @@ class ContactmailController extends Controller {
 
         if ($form->isSubmitted() && $form->isValid()) {            
             $name = $form->getData()['Name'];
-            $this->sendMail($name);
+            $subject = $form->getData()['Subject'];
+            $email = $form->getData()['Email'];
+            $message = $form->getData()['Message'];
+            
+            $this ->sendMail($name, $subject, $email, $message);
+            
         }
                  
         return $this->render('consultancy/contactmail.html.twig', [
@@ -55,15 +60,16 @@ class ContactmailController extends Controller {
  
         
     }
-     private function sendMail($body)
-    {
+    private function sendMail($name, $subject, $email, $message) {
         $mail = \Swift_Message::newInstance()
-            ->setSubject('test mail')
-            ->setFrom('someone@somewhere.com')
-            ->setTo('3n1r4r+6wphw4wogrfs0@sharklasers.com')
-            ->setBody('message body goes here ' . $body)
+            ->setSubject($subject)
+            ->setFrom($email)
+            ->setTo('eyobielfish@gmail.com')
+            ->setBody($message)
         ;
 
         $this->get('mailer')->send($mail);
+        
     }
+     
 }
