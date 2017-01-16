@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %} 
+   <nav class="navbar navbar-light bg-success" role ="navigation">
+        <div class ="container">
+            <ul class ="nav navbar-nav">
+                <li class ="active"><a href ="consultancy">Home </a></li>
+   
+                <li><a href="agricultural">Agricultural Science</a></li>        
+                <li><a href="environmental">Environmental Science</a></li>        
+                <li><a href="agribusiness">Agribusiness Management</a></li>        
+                <li><a href="contactform">Contact</a></li>        
+            </ul>
+        </div>
+    </nav>
+    
+  
+    <hr/>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class ="col-lg-offset-1">
+                    <h1>Contact Us</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class ="col-lg-offset-2">
+    
+                {{ form_start(myform) }}
+                {{ form_widget(myform) }}
+                {{ form_end(myform) }}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+
+
